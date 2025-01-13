@@ -1,0 +1,26 @@
+/* navbar.css */
+.navbar {
+  width: 100%;
+  /* Increased padding to make navbar taller */
+  padding: 40px;
+  background: linear-gradient(to right, #2193b0, #6dd5ed); /* Dark gradient */
+  position: relative;
+  height: 100px;
+  /* Added box shadow for better visual appearance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand-name {
+  margin: 0;
+  color: white;
+  /* Increased font size */
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Added vertical centering */
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

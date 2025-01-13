@@ -1,0 +1,33 @@
+/* ChatbotButton.css */
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background-color: #0072ff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chatbot-button:hover {
+    background-color: #005bb5;
+  }
+  
+  .chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  iframe {
+    border-radius: 8px;
+  }
+  

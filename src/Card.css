@@ -1,0 +1,138 @@
+/* General Body Styling */
+body {
+  background-color: black;  /* Set body background to black */
+  color: white;  /* Set text color to white for contrast */
+  font-family: Arial, sans-serif;  /* Set a clean and simple font */
+  margin: 0;  /* Remove default margin */
+  padding: 0;  /* Remove default padding */
+}
+
+/* Cards Container Styling with Horizontal Flexbox */
+.cards-container {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap; /* No wrapping, keep items in a single row */
+  overflow-x: auto; /* Allow horizontal scrolling if there are too many cards */
+  gap: 20px; /* Space between the cards */
+  padding: 12px;
+  background-color: #121212; /* Slightly darker background for cards container */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for the container */
+}
+
+/* Individual Card Styling */
+.card {
+  width: 250px; /* Fixed width for each card */
+  min-width: 250px; /* Ensure cards don't shrink */
+  height: 350px; /* Fixed height for uniformity */
+  border: 1px solid #444; /* Darker border to blend with dark theme */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Card shadow */
+  background-color: #1f1f1f; /* Dark background for individual cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Hover effect: card lifts */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+}
+
+/* Image Styling */
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* Keep aspect ratio of images */
+  border-bottom: 1px solid #444; /* Darker border to match theme */
+}
+
+/* Card Details Section */
+.card-details {
+  color: white;
+  padding: 15px;
+  text-align: center;
+  flex-grow: 1; /* Ensure the details take up available space */
+}
+
+/* Card Name */
+.card-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #e0e0e0; /* Light grey text color for readability */
+  text-transform: capitalize; /* Capitalize the product name */
+}
+
+/* Card Price */
+.card-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff5722; /* Orange color for price */
+  margin-top: 10px;
+}
+
+/* Card Rating */
+.card-rating {
+  margin-top: 10px;
+  color: #f39c12; /* Yellow color for stars */
+}
+
+.card-rating span {
+  margin: 0 2px;
+}
+
+/* Rating stars: Unicode characters for stars */
+.card-rating span:before {
+  content: "\2605"; /* Full star */
+  font-size: 1rem;
+}
+
+.card-rating .empty:before {
+  content: "\2606"; /* Empty star */
+}
+
+/* Product Cards Container */
+.product-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards if there are too many */
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+  justify-content: flex-start; /* Align items to the left */
+  background-color: #121212; /* Dark background for the card container */
+}
+
+/* Chatbot Button with Gradient Hover Effect */
+.chatbot-button {
+  background: #4caf50; /* Default background color */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.chatbot-button:hover {
+  background: linear-gradient(to right, #00ffc3, #b700ff); /* Gradient effect on hover */
+  transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-container {
+    justify-content: flex-start; /* Align items at the start on smaller screens */
+    gap: 10px; /* Smaller gap between cards */
+  }
+
+  .card {
+    width: 200px; /* Smaller cards for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    justify-content: center; /* Center items on very small screens */
+  }
+
+  .card {
+    width: 180px; /* Even smaller cards */
+  }
+}
